@@ -1,9 +1,6 @@
 "use strict";
-
-const { DataTypes } = require("sequelize/types");
-
 module.exports = (sequelize, DataTypes) => {
-  let Lead = sequelize.define("Lead", {
+  var Lead = sequelize.define("Lead", {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
@@ -15,5 +12,6 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
+
   return Lead;
 };

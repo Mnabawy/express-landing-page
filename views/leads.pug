@@ -1,0 +1,8 @@
+doctype html
+html
+    if leads  
+    h1 Leads 
+    for lead in leads 
+      p
+        span #{lead.id}
+        a(href="/lead/" + lead.id) details
